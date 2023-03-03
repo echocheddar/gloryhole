@@ -52,20 +52,12 @@ class ReactionPrivateReply {
 		if (ev.char.id == char.id) {
 			return;
 		}
-		// Randomize against chance
-		if (Math.random() >= this.chance) {
-			return;
-		}
 
-		let msg = this.phrases
-			? this.phrases[Math.floor(Math.random() * this.phrases.length)]
-			: generateText(this.wordLengthMin, this.wordLengthMax);
-		let pose = msg[0] == ':';
 		if (pose) {
 			msg = msg.slice(1);
 		}
 
-		this.module.actionWhisper.enqueue(ev.char.id, msg, pose, this.priority);
+		this.module.actionPose.enqueue(ev.msg, this.priority);
 	}
 
 	dispose() {

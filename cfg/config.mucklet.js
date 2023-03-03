@@ -82,41 +82,9 @@ const config = {
 		wordLengthMax: 100,  // Say at most 100 words
 		// phrases: null     // Use lorem ipsum
 	},
-	reactionArriveWelcome: {
-		populationChance: {
-			1: 0.5,   // 80% chance with 1 character
-			80: 0.0125, // 5% chance with 80 characters
-		},
-		priority: 150,
-		phrases: [
-			"waves to {name}.",
-			"says, \"Hi, {name}!\"",
-			"nods in greeting.",
-			"welcomes {name}."
-		]
-	},
-	reactionTravelGreet: {
-		populationChance: {
-			1: 0.5,   // 80% chance with 1 character
-			80: 0.0125, // 5% chance with 80 characters
-		},
-		priority: 150,
-		delay: 1 * 1000,     // 1 seconds additional delay before welcoming
-		postdelay: 2 * 1000, // 2 seconds delay after welcoming
-		phrases: [
-			"waves to all.",
-			"says ,\"Hi everyone!\"",
-			"says, \"Hejsan allihopa.\"",
-			"waves.",
-			"says 'Hi' to everyone."
-		]
-	},
 	reactionWhisperReply: {
-		chance: 0.8,  // 80% chance of replying to whispers
+		chance: 1,  // Always reply to whispers
 		priority: 100,
-		wordLengthMin: 2,    // Whisper at least 2 words
-		wordLengthMax: 100,  // Whisper at most 100 words
-		// phrases: null,    // Use lorem ipsum
 	},
 };
 
