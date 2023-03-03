@@ -24,7 +24,7 @@ const config = {
 		postdelay: 5000, // Wait 5 seconds after using an exit
 	},
 	actionIdle: {
-		probability: 20,         // Semi high probability to idle
+		probability: 0,         // No probability to idle.
 		delayMin: 10 * 1000,     // Idle at least 10 seconds
 		delayMax: 5 * 60 * 1000, // Idle at most 5 minutes
 		spread: 'cube'           // Few high values
@@ -36,7 +36,7 @@ const config = {
 			2: 20, // Probability 20 with 2 characters in the room
 			3: 40, // Probability 40 with 3 or more characters in the room
 		},
-		delay: 2 * 1000,     // 2 seconds additional delay before saying
+		delay: 500,     // 2 seconds additional delay before saying
 		postdelay: 5 * 1000, // 5 seconds delay after saying something
 		wordLengthMin: 2,    // Say at least 2 words
 		wordLengthMax: 100,  // Say at most 100 words

@@ -36,11 +36,12 @@ class ActionTeleport {
 	_init = (module) => {
 		this.module = Object.assign({ self: this }, module);
 
-		this.module.botController.addAction({
-			id: 'teleport',
-			outcomes: this._outcomes,
-			exec: this._exec,
-		});
+		// Let's not.
+		// this.module.botController.addAction({
+		// 	id: 'teleport',
+		// 	outcomes: this._outcomes,
+		// 	exec: this._exec,
+		// });
 
 		// Fetch global teleport nodes as soon as logged in
 		this.globalTeleports = null;

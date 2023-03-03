@@ -41,10 +41,9 @@ class ActionSay {
 
 	_init = (module) => {
 		this.module = Object.assign({ self: this }, module);
-
 		this.module.botController.addAction({
 			id: 'say',
-			outcomes: this._outcomes,
+			outcomes: null,
 			exec: this._exec,
 		});
 	}

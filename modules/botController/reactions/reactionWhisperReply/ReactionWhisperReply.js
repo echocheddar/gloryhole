@@ -32,7 +32,7 @@ class ReactionPrivateReply {
 			phrases: { type: '?array' },
 		});
 
-		this.app.require([ 'charEvents', 'actionWhisper' ], this._init);
+		this.app.require([ 'botController', 'charEvents', 'actionWhisper', 'actionPose' ], this._init);
 	}
 
 	_init = (module) => {
@@ -52,11 +52,6 @@ class ReactionPrivateReply {
 		if (ev.char.id == char.id) {
 			return;
 		}
-
-		if (pose) {
-			msg = msg.slice(1);
-		}
-
 		this.module.actionPose.enqueue(ev.msg, this.priority);
 	}
 

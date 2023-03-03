@@ -1,4 +1,4 @@
-import setParams from '#utils/setParams.js';
+// import setParams from '#utils/setParams.js';
 import findById from '#utils/findById.js';
 import { populationProbability } from '#utils/probability.js';
 
@@ -34,10 +34,9 @@ class ActionGo {
 
 	_init = (module) => {
 		this.module = Object.assign({ self: this }, module);
-
 		this.module.botController.addAction({
 			id: 'go',
-			outcomes: this._outcomes,
+			outcomes: null,
 			exec: this._exec,
 		});
 	}

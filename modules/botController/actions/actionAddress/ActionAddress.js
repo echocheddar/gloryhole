@@ -40,12 +40,12 @@ class ActionAddress {
 
 	_init = (module) => {
 		this.module = Object.assign({ self: this }, module);
-
-		this.module.botController.addAction({
-			id: 'address',
-			outcomes: this._outcomes,
-			exec: this._exec,
-		});
+		// Let's not.
+		// this.module.botController.addAction({
+		// 	id: 'address',
+		// 	outcomes: this._outcomes,
+		// 	exec: this._exec,
+		// });
 	}
 
 	/**

@@ -44,7 +44,7 @@ class ActionPose {
 
 		this.module.botController.addAction({
 			id: 'pose',
-			outcomes: this._outcomes,
+			outcomes: null,
 			exec: this._exec,
 		});
 	}
